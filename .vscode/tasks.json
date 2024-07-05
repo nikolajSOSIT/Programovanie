@@ -11,8 +11,7 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "D:\\msys64\\mingw64\\include\\glad\\glad.c",
-                "-lraylib","-lsfml-audio", "-lsfml-graphics", "-lsfml-network", "-lsfml-system", "-lsfml-window", "-lopengl32" ,"-lfreeglut" , "-lglu32", "-lglew32", "-lglfw3", "-lgdi32", "-lmingw32",
-
+                "-lraylib","-lsfml-audio", "-lsfml-graphics", "-lsfml-network", "-lsfml-system", "-lsfml-window", "-lopengl32" ,"-lfreeglut" , "-lglu32", "-lglew32", "-lglfw3", "-lgdi32", "-lmingw32", "-lvulkan-1"
             ],
             "options": {
                 "cwd": "${fileDirname}"
