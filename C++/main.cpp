@@ -1,22 +1,25 @@
-#include <raylib.h>
-#include <windows.h>
-#include <iostream>
+#include "raylib.h"
+#include <string>
 
-int main()
-{
-    InitWindow(300, 600, "Tetris");
-    SetTargetFPS(60);
+int main() {
+	const int width = 300;
+	const int height = 600;
 
-    while (!WindowShouldClose()) 
-    {
-        BeginDrawing();
+	InitWindow(width, height, "Hello");
 
-        for (int i = 0; i < 256; i++)
-        {
-            Color color = {i, 0, 0, 255};
-            DrawRectangle(50, 50, 10, 10, color);
-            Sleep(1000);
-        }
-        EndDrawing();
-    }
+	while (!WindowShouldClose()){
+		BeginDrawing();
+		ClearBackground(RAYWHITE);
+		int x = 0;
+		int y = 0;
+		for (int i = 0; i < 51; i++)
+		{
+			unsigned char r = i * 5;
+			Color color = {r,r, 0, 255};
+			DrawRectangle(x, y, x+5, 300, color);	
+			x += 5;
+		}
+		EndDrawing();
+	}
+	return 0;
 }
