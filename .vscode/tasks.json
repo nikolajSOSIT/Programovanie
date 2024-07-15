@@ -3,15 +3,15 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "D:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "D:\\msys64\\mingw64\\bin\\g++.exe",         
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "D:\\msys64\\mingw64\\include\\glad\\glad.C", 
-                "-lraylib","-lsfml-audio", "-lsfml-graphics", "-lsfml-network", "-lsfml-system", "-lsfml-window", "-lopengl32" ,"-lfreeglut" , "-lglu32", "-lglew32", "-lglfw3", "-lgdi32", "-lmingw32", "-lvulkan-1"
+                "D:\\glad\\glad.c",
+                "-lraylib","-lopengl32", "-lfreeglut", "-lglu32", "-lglew32", "-lglfw3", "-lgdi32", "-lmingw32", "-lsfml-graphics", "-lsfml-window", "-lsfml-system", "-lsfml-network", "-lsfml-audio", "-lvulkan-1",
             ],
             "options": {
                 "cwd": "${fileDirname}"
