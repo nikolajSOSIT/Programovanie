@@ -1,14 +1,10 @@
-#include <raylib.h>
+#include <vector>
+#include <iostream>
 
 int main(){
-    InitWindow(800, 450, "raylib [core] example - basic window");
-    SetTargetFPS(60);
-    while(!WindowShouldClose()){
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-        EndDrawing();
+    std::vector<int> v = {1,2,3,4,5};
+    for(auto i:v){
+        std::cout << i << std::endl;
     }
-    CloseWindow();
     return 0;
 }
