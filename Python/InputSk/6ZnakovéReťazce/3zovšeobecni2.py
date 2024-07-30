@@ -14,6 +14,11 @@ sucet('987654321+99999')
 """
 
 def sucet(retazec):
-    x = retazec.find('+')
-    y = int(retazec[:x]) + int(retazec[x+1:])
-    print(y)
+    retazec = retazec.split('+')
+    x = 0
+    for i in range(len(retazec)):
+        x += int(retazec[i])
+    return x
+
+x = sucet('1+2+3+4+5+6')
+print(x)
