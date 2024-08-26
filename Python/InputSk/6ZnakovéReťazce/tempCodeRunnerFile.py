@@ -1,1 +1,0 @@
-ozatvorkuj('prospešné programovanie v prologu', 'pro')
