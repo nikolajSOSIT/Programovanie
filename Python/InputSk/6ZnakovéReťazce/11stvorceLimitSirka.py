@@ -15,16 +15,25 @@ canvas.pack()
 
 def stvorce(retazec):
     x = 10
-    y = 60
-    cele = 0
-    farby = retazec.split()
-    for i in range(len(farby)//2):
-        canvas.create_rectangle(x, y, x + int(farby[i]), y + 50, fill = farby[i+1])
-        x += int(farby[i])
-        cele += int(farby[i])
-        if cele > sirka:
-            break
-
+    y = 80
+    cele = 10
+    retazec_ = retazec.split()
+    farby = []
+    parameter = []
+    for i in range(len(retazec_)):
+        if i % 2 == 0:
+            parameter.append(retazec_[i])
+        else:
+            farby.append(retazec_[i])   
+    i = 0
+    while cele + int(parameter[i]) < sirka:
+        canvas.create_rectangle(x, y, x + int(parameter[i]), y - int(parameter[i]), fill = farby[i])
+        x += int(parameter[i]) + 5
+        cele += int(parameter[i]) + 5 
+        i += 1
+        if i >= len(farby):
+            i = 0
+        
     
 stvorce('40 red 20 blue 60 purple 40 red 30 gold')
 
