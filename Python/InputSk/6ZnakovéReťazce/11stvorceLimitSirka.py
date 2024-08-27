@@ -9,7 +9,7 @@ Do premennej sirka nastav nejakú šírku grafickej plochy a zavolaj funkciu
 
 import tkinter
 
-sirka = 450
+sirka = 850
 canvas = tkinter.Canvas(width=sirka)
 canvas.pack()
 
