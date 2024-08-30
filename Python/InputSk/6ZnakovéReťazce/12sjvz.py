@@ -1,34 +1,42 @@
+"""
+Na konci prednášky je funkcia kresli(retazec), pomocou ktorej môžeme 
+vytvárať nejakú kresbu zakódovanú písmenami 'svjz'. 
+Nakresli pomocou tejto funkcie takýto obrázok:
+
+s is up
+j is down
+v is right
+z is left
+"""
+
 import tkinter
 
 def kresli(retazec):
     x, y = 100, 100
-    nasobok = 1
-    farba = 'black'
     for znak in retazec:
         x1, y1 = x, y
         if znak == 's':
-            y1 -= 10 * nasobok
+            y1 -= 10
         elif znak == 'v':
-            x1 += 10 * nasobok
+            x1 += 10
         elif znak == 'j':
-            y1 += 10 * nasobok
+            y1 += 10
         elif znak == 'z':
-            x1 -= 10 * nasobok
-        elif znak == 'h':
-            farba = ""
-        elif znak == 'd':
-            farba = "black"
-        elif znak.isdigit():
-            nasobok = int(znak)
-        elif not znak.isdigit():
-            print('nerozumiem "' + znak + '"')  
+            x1 -= 10
+        else:
+            print('nerozumiem "' + znak + '"')
             return
-        canvas.create_line(x, y, x1, y1, fill=farba)
+        canvas.create_line(x, y, x1, y1)
         x, y = x1, y1
+
+
+
 
 canvas = tkinter.Canvas()
 canvas.pack()
 
-kresli('4v4j4z4sh5vd'*5)
+kresli('ssvvjjzzvv'*3)
+kresli('ssvvssvvjjjjjjzzss')
+
 
 tkinter.mainloop()
