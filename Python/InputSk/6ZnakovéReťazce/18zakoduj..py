@@ -14,10 +14,15 @@ zakoduj(x, 16)
 
 def zakoduj(text, posun):
     retazec = ""
+    abeceda = 'abcdefghijklmnopqrstuvwxyz'
     for i in text:
-        retazec += str(ord(i) + posun) + " "
-        print(retazec)
+        print(i)
+        if i.islower():
+            retazec += abeceda[(abeceda.index(i) + posun) % 26]
+        else:
+            retazec += i
+
     return retazec
 
 print(zakoduj('pyThon', 10))
-    
+print(zakoduj('ziTryx', -10))
