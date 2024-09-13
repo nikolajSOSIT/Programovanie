@@ -1,0 +1,1 @@
+print("The current value of friendlyWelcome is")

@@ -10,7 +10,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "vulkan-1"
+                "D:/msys64/mingw64/include/glad/glad.c",
+                "-lopengl32 -lfreeglut -lglu32 -lglew32 -lglfw3 -lgdi32 -lmingw32"
             ],
             "options": {
                 "cwd": "${fileDirname}"
