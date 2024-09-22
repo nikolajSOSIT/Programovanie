@@ -3,15 +3,28 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "C:\\msys64\\mingw64\\include\\glad\\glad.c",
-                "-lraylib -lopengl32 -lfreeglut -lglu32 -lglew32 -lglfw3 -lgdi32 -lsfml-graphics -lsfml-system -lsfml-window",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-lraylib",
+                "-lopengl32",
+                "-lfreeglut",
+                "-lglu32",
+                "-lglew32",
+                "-lglfw3",
+                "-lgdi32",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "-lsfml-audio",
+                "-lsfml-network",
+                "-lvulkan-1",
+                "C:/glad/glad.h"
+
             ],
             "options": {
                 "cwd": "${fileDirname}"

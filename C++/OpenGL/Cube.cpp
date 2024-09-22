@@ -1,52 +1,62 @@
-// A simple introductory program; its main window contains a static picture
-// of a triangle, whose three vertices are red, green and blue.  The program
-// illustrates viewing with default viewing parameters only.
-
 #ifdef __APPLE_CC__
 #include <GLUT/glut.h>
 #else
 #include <GL/glut.h>
 #endif
 
-// Clears the current window and draws a triangle.
+// Clears the window and draws the torus.
 void display() {
 
-  // Set every pixel in the frame buffer to the current clear color.
   glClear(GL_COLOR_BUFFER_BIT);
 
-  // Drawing is done by specifying a sequence of vertices.  The way these
-  // vertices are connected (or not connected) depends on the argument to
-  // glBegin.  GL_POLYGON constructs a filled polygon.
-  glBegin(GL_POLYGON);
-    glColor3f(1, 0, 0); glVertex3f(-0.6, -0.75, 0.5);
-    glColor3f(0, 1, 0); glVertex3f(0.6, -0.75, 0);
-    glColor3f(0, 0, 1); glVertex3f(0, 0.75, 0);
+  // Draw a white torus of outer radius 3, inner radius 0.5 with 15 stacks
+  // and 30 slices.
+  glColor3f(1.0, 1.0, 1.0);
+  glutWireTorus(0.5, 3, 15, 30);
+
+  // Draw a red x-axis, a green y-axis, and a blue z-axis.  Each of the
+  // axes are ten units long.
+  glBegin(GL_LINES);
+    glColor3f(1, 0, 0); glVertex3f(0, 0, 0); glVertex3f(10, 0, 0);
+    glColor3f(0, 1, 0); glVertex3f(0, 0, 0); glVertex3f(0, 10, 0);
+    glColor3f(0, 0, 1); glVertex3f(0, 0, 0); glVertex3f(0, 0, 10);
   glEnd();
 
-  // Flush drawing command buffer to make drawing happen as soon as possible.
   glFlush();
 }
 
-// Initializes GLUT, the display mode, and main window; registers callbacks;
-// enters the main event loop.
-int main(int argc, char** argv) {
+// Sets up global attributes like clear color and drawing color, and sets up
+// the desired projection and modelview matrices.
+void init() {
 
-  // Use a single buffered window in RGB mode (as opposed to a double-buffered
-  // window or color-index mode).
+  // Set the current clear color to black and the current drawing color to
+  // white.
+  glClearColor(0.0, 0.0, 0.0, 1.0);
+  glColor3f(1.0, 1.0, 1.0);
+
+  // Set the camera lens to have a 60 degree (vertical) field of view, an
+  // aspect ratio of 4/3, and have everything closer than 1 unit to the
+  // camera and greater than 40 units distant clipped away.
+  glMatrixMode(GL_PROJECTION);
+  glLoadIdentity();
+  gluPerspective(60.0, 4.0/3.0, 1, 40);
+
+  // Position camera at (4, 6, 5) looking at (0, 0, 0) with the vector
+  // <0, 1, 0> pointing upward.
+  glMatrixMode(GL_MODELVIEW);
+  glLoadIdentity();
+  gluLookAt(4, 6, 5, 0, 0, 0, 0, 1, 0);
+}
+
+// Initializes GLUT, the display mode, and main window; registers callbacks;
+// does application initialization; enters the main event loop.
+int main(int argc, char** argv) {
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-
-  // Position window at (80,80)-(480,380) and give it a title.
   glutInitWindowPosition(80, 80);
-  glutInitWindowSize(400, 300);
-  glutCreateWindow("A Simple Triangle");
-
-  // Tell GLUT that whenever the main window needs to be repainted that it
-  // should call the function display().
+  glutInitWindowSize(800, 600);
+  glutCreateWindow("A Simple Torus");
   glutDisplayFunc(display);
-
-  // Tell GLUT to start reading and processing events.  This function
-  // never returns; the program only exits when the user closes the main
-  // window or kills the process.
+  init();
   glutMainLoop();
 }
