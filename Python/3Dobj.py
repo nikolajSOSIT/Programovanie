@@ -1,6 +1,6 @@
-from OpenGL.GL import *
-from OpenGL.GLU import *
+from OpenGL.GL import glBegin, glEnd, glMatrixMode, glVertex3f, glColor3f, glClear, glFlush, GL_COLOR_BUFFER_BIT, glRotatef
 from OpenGL.GLUT import *
+from OpenGL.GLU import *
 import sys
 
 def draw():
