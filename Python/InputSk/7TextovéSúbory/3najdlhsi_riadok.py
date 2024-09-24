@@ -5,19 +5,14 @@ Napríklad:
 """
 
 def najdlhsi_riadok(meno_suboru):
-    with open(meno_suboru, "r") as t:
-        maxi = 0
-        vysled = ""
-        len_ = len(t.readline)
-        if maxi > len(t.readline()):
-            maxi = maxi
-        else:
-            vysled = repr(t.readline())
-            maxi = len(vysled)
-        t.close()
-    return vysled
+    with open(meno_suboru, 'r') as subor:
+        najdlhsi = subor.readline()
+        for riadok in subor:
+            if len(riadok) > len(najdlhsi):
+                najdlhsi = riadok
+    return repr(najdlhsi)
 
 
-print(najdlhsi_riadok("Python\InputSk\\7TextovéSúbory\\text1.txt"))
+print(najdlhsi_riadok("Python\InputSk\\7TextovéSúbory\\text3.txt"))
 
         
