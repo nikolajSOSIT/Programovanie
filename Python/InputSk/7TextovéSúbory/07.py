@@ -10,9 +10,19 @@ for i in range(5):
 t.close()
 """
 
+"""
 t = open("Python\InputSk\\7TextovéSúbory\\text1.txt", "r")
 riadok = t.readline()
 while riadok != '':
     print(riadok, end="")
     riadok = t.readline()
+t.close()
+"""
+
+t = open("Python\InputSk\\7TextovéSúbory\\text1.txt", "r")
+while True:
+    riadok = t.readline()
+    if riadok == '':
+        break
+    print(riadok, end="")
 t.close()
