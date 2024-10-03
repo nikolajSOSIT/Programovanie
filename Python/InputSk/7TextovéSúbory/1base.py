@@ -5,7 +5,7 @@ riadku ešte vypíše prvé slovo (je ukončené medzerou)
 a počet výskytov medzier v tomto riadku. Napríklad:
 """
 
-def fun(nazov):
+def fun(meno_suboru):
     subor = open(f"Python\InputSk\\7TextovéSúbory\{nazov}", 'r')
     for i in range(2):
         riadok = subor.readline()
