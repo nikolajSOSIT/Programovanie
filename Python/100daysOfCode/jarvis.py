@@ -129,9 +129,8 @@ if __name__ == "__main__":
         
         elif 'talk with ai' in query:
             speak("What should I ask the assistant?")
-            task = takeCommand()
-            while(task != "quit"):
-                task = takeCommand()
+            while(query != "quit"):
+                query = takeCommand()
                 response = model.generate_content(task)
                 print(response.text)
                 speak(response.text)
