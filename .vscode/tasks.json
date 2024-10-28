@@ -24,7 +24,7 @@
                 "-lsfml-audio",
                 "-lsfml-network",
                 "-lvulkan-1",
-                "C:/glad/glad.h"
+                "C:/msys64/mingw64/include/glad/glad.c"
 
             ],
             "options": {

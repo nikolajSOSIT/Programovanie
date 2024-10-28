@@ -11,7 +11,7 @@ def kresli(meno_suboru):
             x, y = int(riadok[:i]), int(riadok[i:])
             if x1 == 0:
                 x1, y1 = x, y
-            else:
+            else:   
                 x2, y2 = x, y
                 canvas.create_line(x1, y1, x2, y2)
             x1, y1 = x, y
