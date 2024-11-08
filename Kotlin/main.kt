@@ -1,16 +1,20 @@
-class Car(var brand: String, var model: String, var year: Int) {
-  // Class function
-  fun drive() {
-    println("Wrooom!")
-  }
-}
+import javax.swing.JFrame
+import javax.swing.JLabel
+import javax.swing.SwingConstants
+import java.awt.Dimension
 
 fun main() {
-  val c1 = Car("Ford", "Mustang", 1969)
-  
-  // Print property values
-  println(c1.brand + " " + c1.model + " " + c1.year)
-  
-  // Call the function
-  c1.drive()  
+    // Create a new JFrame (window) and set its properties
+    val frame = JFrame("Kotlin Graphic Window Example")
+    frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+    frame.setSize(400, 300)
+    frame.preferredSize = Dimension(400, 300)
+
+    // Create a JLabel to display text
+    val label = JLabel("Hello, Kotlin Graphics!", SwingConstants.CENTER)
+    frame.add(label)
+
+    // Center the window and make it visible
+    frame.setLocationRelativeTo(null)
+    frame.isVisible = true
 }

@@ -2,30 +2,18 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "label": "C/C++: g++ build active file",
+            "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-lstdc++",
-                "-lraylib",
-                "-lopengl32",
-                "-lfreeglut",
-                "-lglu32",
-                "-lglew32",
-                "-lglfw3",
-                "-lgdi32",
-                "-lsfml-graphics",
-                "-lsfml-window",
-                "-lsfml-system",
-                "-lsfml-audio",
-                "-lsfml-network",
-                "-lvulkan-1",
-                "C:/msys64/mingw64/include/glad/glad.c"
-
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lvulkan",
+                "-lglfw",
+                "-lGL",
+                "-lraylib"
             ],
             "options": {
                 "cwd": "${fileDirname}"
