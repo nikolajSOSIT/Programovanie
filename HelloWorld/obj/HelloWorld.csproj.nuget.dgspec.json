@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nikolaj/HelloWorld/HelloWorld.csproj": {}
+    "/home/nikolaj/Documents/Programovanie/HelloWorld/HelloWorld.csproj": {}
   },
   "projects": {
-    "/home/nikolaj/HelloWorld/HelloWorld.csproj": {
+    "/home/nikolaj/Documents/Programovanie/HelloWorld/HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nikolaj/HelloWorld/HelloWorld.csproj",
+        "projectUniqueName": "/home/nikolaj/Documents/Programovanie/HelloWorld/HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "/home/nikolaj/HelloWorld/HelloWorld.csproj",
+        "projectPath": "/home/nikolaj/Documents/Programovanie/HelloWorld/HelloWorld.csproj",
         "packagesPath": "/home/nikolaj/.nuget/packages/",
-        "outputPath": "/home/nikolaj/HelloWorld/obj/",
+        "outputPath": "/home/nikolaj/Documents/Programovanie/HelloWorld/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nikolaj/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "GtkSharp": {
+              "target": "Package",
+              "version": "[3.24.23, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

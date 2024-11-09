@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "qOTkmcH04PD0wVSYNzN1apLx9ke7zwy5nlv+4AxlMesNX3b4btIeS8h4gawA2+wkWPi/tBAa7DPaNCNwKMNQWA==",
+  "dgSpecHash": "IbCnE6HLj0fqSWSI2LCNmre70+nEZvYAKuvs5tH19/ip+vKUBxFu9YRVy9whSvtLvZrpiPU1r7ED8xXRmTYu7A==",
   "success": true,
-  "projectFilePath": "/home/nikolaj/HelloWorld/HelloWorld.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "/home/nikolaj/Documents/Programovanie/HelloWorld/HelloWorld.csproj",
+  "expectedPackageFiles": [
+    "/home/nikolaj/.nuget/packages/atksharp/3.24.24.4/atksharp.3.24.24.4.nupkg.sha512",
+    "/home/nikolaj/.nuget/packages/cairosharp/3.24.24.4/cairosharp.3.24.24.4.nupkg.sha512",
+    "/home/nikolaj/.nuget/packages/gdksharp/3.24.24.4/gdksharp.3.24.24.4.nupkg.sha512",
+    "/home/nikolaj/.nuget/packages/giosharp/3.24.24.4/giosharp.3.24.24.4.nupkg.sha512",
+    "/home/nikolaj/.nuget/packages/glibsharp/3.24.24.4/glibsharp.3.24.24.4.nupkg.sha512",
+    "/home/nikolaj/.nuget/packages/gtksharp/3.24.24.4/gtksharp.3.24.24.4.nupkg.sha512",
+    "/home/nikolaj/.nuget/packages/pangosharp/3.24.24.4/pangosharp.3.24.24.4.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "HelloWorld depends on GtkSharp (>= 3.24.23) but GtkSharp 3.24.23 was not found. An approximate best match of GtkSharp 3.24.24.4 was resolved.",
+      "libraryId": "GtkSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
