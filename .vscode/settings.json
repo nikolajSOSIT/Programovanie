@@ -89,5 +89,6 @@
         "string_view": "cpp",
         "text_encoding": "cpp",
         "cinttypes": "cpp"
-    }
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
 }
